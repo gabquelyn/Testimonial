@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+    <style>
+        .main-container{
+            width: 80vw;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+        .slide-container{
+            display: flex;
+            width: 320vw;
+            transform: translateX(0);
+            transition: 0.4s ease;
+        }
+
+        .slide{
+            /* background-color: #DEF3FD; */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80vw;
+            transition: transform 0.3s linear;
+            margin: 0 4px;
+            padding: 4rem;
+            transition: 0.4s ease;
+            
+        }
+        .slide img{
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .slide p{
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        .slide h3{
+            font-style: italic;
+            font-size: 1.3rem;
+            margin: 10px;
+        }
+        .avatar{
+            position: relative;
+        }
+        .fa-quote{
+            color: rgb(255, 165, 0, 0.4);
+            position: absolute;
+            top: 10px;
+            left: -20px;
+            font-size: 5rem;
+        }
+
+        @media(max-width: 700px){
+            .slide p{
+            font-size: 1.2rem;
+        }
+        .slide h3{
+            text-align: center;
+        }
+        .slide img{
+            height: 150px;
+            width: 150px;
+        }
+        .slide{
+            padding: 1rem;
+        }
+    }
+
+        
+    </style>
+</head>
+<body>
+    <div class = 'main-container'>
+        <div class="slide-container">
+            <div class = 'slide'>
+                <div class = 'avatar'>
+                    <img src ="https://media.istockphoto.com/photos/shot-of-a-young-woman-writing-in-her-journal-at-the-beach-picture-id1338851493?b=1&k=20&m=1338851493&s=170667a&w=0&h=zBJ_4x9L843t40zyXGK7Lzj81lI_tg01QN83qUSH6EM=">
+                    <div class="fas fa-quote-left fa-quote"></div>
+                </div>
+                <div class = 'content'>
+                    <p>We provide the oustanding service that you cannot deny for your optimum satisfaction, veuerufiuajbi</p>
+                    <h3>-James</h3>
+                </div>
+            </div>
+            <div class = 'slide'>
+                <div class = 'avatar'>
+                    <img src ="https://media.istockphoto.com/photos/shot-of-a-young-woman-writing-in-her-journal-at-the-beach-picture-id1338851493?b=1&k=20&m=1338851493&s=170667a&w=0&h=zBJ_4x9L843t40zyXGK7Lzj81lI_tg01QN83qUSH6EM=">
+                    <div class="fas fa-quote-left fa-quote"></div>
+                </div>
+                <div class = 'content'>
+                    <p>We provide the oustanding service that you cannot deny for your optimum satisfaction, veuerufiuajbi</p>
+                    <h3>-Emmanuel</h3>
+                </div>
+            </div>
+            <div class = 'slide'>
+            <div class = avatar>
+                <img src ="https://media.istockphoto.com/photos/shot-of-a-young-woman-writing-in-her-journal-at-the-beach-picture-id1338851493?b=1&k=20&m=1338851493&s=170667a&w=0&h=zBJ_4x9L843t40zyXGK7Lzj81lI_tg01QN83qUSH6EM=">
+                <div class="fas fa-quote-left fa-quote"></div>
+            </div>
+                <div class = 'content'>
+                    <p>We provide the oustanding service that you cannot deny for your optimum satisfaction, veuerufiuajbi</p>
+                    <h3>-Philip</h3>
+                </div>
+            </div>
+            <div class = 'slide'>
+                <div class = 'avatar'>
+                    <div class="fas fa-quote-left fa-quote"></div>
+                    <img src ="https://media.istockphoto.com/photos/shot-of-a-young-woman-writing-in-her-journal-at-the-beach-picture-id1338851493?b=1&k=20&m=1338851493&s=170667a&w=0&h=zBJ_4x9L843t40zyXGK7Lzj81lI_tg01QN83qUSH6EM=">
+                </div>
+                <div class ='content'>
+                    <p>We provide the oustanding service that you cannot deny for your optimum satisfaction, veuer uf</p>
+                    <h3>-Lateef</h3>
+                </div>
+            </div>  
+        </div>
+    </div>
+    <script>
+        
+        const slideContainer = document.querySelector('.slide-container');
+        const slides = document.querySelectorAll('.slide');
+        const container = document.querySelector('.main-container');
+
+        
+        function carousel() {
+            let count = 0;
+
+            setInterval(()=>{
+                
+                slideContainer.style.transform = `translateX(-${count * 80}vw)`;
+                count++;
+
+                if(count > slides.length - 1){
+                    count = 0;
+                }
+            }, 6000);
+        }
+        
+        carousel();
+     
+    </script>
+</body>
+</html
